@@ -9,7 +9,8 @@ import {
     MDBIcon
   }
   from 'mdb-react-ui-kit';
-import useAuth from './useAuth';
+import useAuth from '../AutenticacaoDeLogin/useAuth';
+
 import { useNavigate,Link } from 'react-router-dom';
 import { useState } from 'react';
   
