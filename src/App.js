@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Rotas from '../src/Componentes/Rotas';
-import { AuthProvider } from './auth';
+import { AuthProvider } from "./AutenticacaoDeLogin/auth";
 
 function App() {
   return (
