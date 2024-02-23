@@ -2,7 +2,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Cadastro from "./Cadastro";
 import Login from "./Login";
 import Principal from "./Principal";
-import useAuth from "./useAuth";
+import useAuth from '../AutenticacaoDeLogin/useAuth';
+
 
 export default function Rotas(){
 
