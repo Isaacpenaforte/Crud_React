@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import Rotas from './Rotas';
+import Rotas from '../src/Componentes/Rotas';
 import { AuthProvider } from './auth';
 
 function App() {
