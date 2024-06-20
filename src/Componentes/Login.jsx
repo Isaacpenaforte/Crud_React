@@ -48,14 +48,14 @@ function Login() {
 
               <h2 className="fw-bold mb-2 text-uppercase">Página de Login</h2>
 <br></br>
-              <MDBInput wrapperClass='mb-4 mx-5 w-100' labelClass='text-white' placeholder='Digite seu email' value={email} onChange={(e) => [setEmail(e.target.value)]} id='formControlLg' type='email' size="lg"/>
-              <MDBInput wrapperClass='mb-4 mx-5 w-100' labelClass='text-white' placeholder='Digite sua senha' value={senha} onChange={(e) =>[setSenha(e.target.value)]} id='formControlLg' type='password' size="lg"/>
+              <MDBInput wrapperClass='mb-4 mx-5 w-100' labelClass='text-white' placeholder='Digite seu email' value={email} onChange={(e) => [setEmail(e.target.value)]} id='campo_emailLogin' type='email' size="lg"/>
+              <MDBInput wrapperClass='mb-4 mx-5 w-100' labelClass='text-white' placeholder='Digite sua senha' value={senha} onChange={(e) =>[setSenha(e.target.value)]} id='campo_senhaLogin' type='password' size="lg"/>
 
-              <button type="button" onClick={handleLogin} className="btn btn-light">Entrar</button>
+              <button type="button" onClick={handleLogin} className="btn btn-light" id='bt_login' >Entrar</button>
 
 <br></br>
               <div>
-                <p className="mb-0">Não possui uma conta? <a href="#!" className="text-white-50 fw-bold"></a><Link to="/Cadastro">Registre-se</Link></p>
+                <p className="mb-0">Não possui uma conta? <a href="#!" className="text-white-50 fw-bold" ></a><Link to="/Cadastro" id = 'bt_registrar'>Registre-se</Link></p>
 
               </div>
             </MDBCardBody>

@@ -28,12 +28,12 @@ export default function Principal(){
         return(
             api.map((api) =>(
                 <tr key={api.id}>
-                    <td>{api.id}</td>
-                    <td>{api.nome}</td>
-                    <td>{api.presenca}</td>
-                    <td>{api.numDeFaltas}</td>
-                    <td><Button variant="danger" onClick={() => apagarApi(api.id)}>Excluir</Button>{' '}   </td>  
-                    <td><Button variant="info" onClick={() => atualizarApi(api.id)}>Atualizar</Button>{' '}   </td>             
+                    <td id = {`tb_id${api.id}`}>{api.id}</td>
+                    <td id = {`tb_nome${api.id}`}>{api.nome}</td>
+                    <td id = {`tb_presenca${api.id}`}>{api.presenca}</td>
+                    <td id = {`tb_faltas${api.id}`}>{api.numDeFaltas}</td>
+                    <td><Button variant="danger" id = {`bt_excluir${api.id}`} onClick={() => apagarApi(api.id)}>Excluir</Button>{' '}   </td>  
+                    <td><Button variant="info" id = {`bt_atualizar${api.id}`} onClick={() => atualizarApi(api.id)}>Atualizar</Button>{' '}   </td>             
            
                     </tr>
             ))
@@ -150,23 +150,23 @@ export default function Principal(){
             <br></br>
             <br></br>
        <Form>
-      <Row>
-        <Col>
-          <Form.Control placeholder="ID" value={id} readOnly={true}/>
-        </Col>
-        <Col>
-          <Form.Control placeholder="Nome" value={nome} onChange={atualizaNome}/>
-        </Col>
-        <Col>
-          <Form.Control placeholder="Presença" value={presenca} onChange={atualizaPresenca}/>
-        </Col>
-        <Col>
-          <Form.Control placeholder="Nº de Faltas" value={numDeFaltas} onChange={atualizaNumDeFaltas}/>
-        </Col>
-              </Row>
+       <Row>
+                    <Col>
+                        <Form.Control id="idField" placeholder="ID" value={id} readOnly={true} />
+                    </Col>
+                    <Col>
+                        <Form.Control id="nomeField" placeholder="Nome" value={nome} onChange={atualizaNome} />
+                    </Col>
+                    <Col>
+                        <Form.Control id="presencaField" placeholder="Presença" value={presenca} onChange={atualizaPresenca} />
+                    </Col>
+                    <Col>
+                        <Form.Control id="numDeFaltasField" placeholder="Nº de Faltas" value={numDeFaltas} onChange={atualizaNumDeFaltas} />
+                    </Col>
+                </Row>
               <br></br>
               <br></br>
-              <button type="submit" class="btn btn-light" onClick={salvar}>Salvar</button>
+              <button type="submit" id= "bt_salvar" class="btn btn-light" onClick={salvar}>Salvar</button>
 
     </Form>
     <br></br>

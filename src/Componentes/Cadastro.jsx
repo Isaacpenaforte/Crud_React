@@ -38,7 +38,7 @@ export default function Cadastro (){
         alert(res)
         return
     }
-    alert("Usuario cadastrado com sucesso")
+    alert("Usuario cadastrado com sucesso");
     navigate("/")
    }
    
@@ -55,12 +55,12 @@ export default function Cadastro (){
     
                   <h2 className="fw-bold mb-2 text-uppercase">Página de Cadastro</h2>
     <br></br>
-                  <MDBInput wrapperClass='mb-4 mx-5 w-100' labelClass='text-white' placeholder='Digite seu email' value={email} onChange={(e) => [setEmail(e.target.value)]} id='formControlLg' type='email' size="lg"/>
-                  <MDBInput wrapperClass='mb-4 mx-5 w-100' labelClass='text-white' placeholder='Confirme seu email' value={emailCon} onChange={(e) => [setEmailCon(e.target.value)]} id='formControlLg' type='email' size="lg"/>
+                  <MDBInput wrapperClass='mb-4 mx-5 w-100' labelClass='text-white' placeholder='Digite seu email' id = 'campo_email' value={email} onChange={(e) => [setEmail(e.target.value)]} type='email' size="lg"/>
+                  <MDBInput wrapperClass='mb-4 mx-5 w-100' labelClass='text-white' placeholder='Confirme seu email' id = 'campo_confirmar_email' value={emailCon} onChange={(e) => [setEmailCon(e.target.value)]} type='email' size="lg"/>
 
-                  <MDBInput wrapperClass='mb-4 mx-5 w-100' labelClass='text-white' placeholder='Crie sua senha' value={senha} onChange={(e) =>[setSenha(e.target.value)]} id='formControlLg' type='password' size="lg"/>
+                  <MDBInput wrapperClass='mb-4 mx-5 w-100' labelClass='text-white' placeholder='Crie sua senha' id='campo_senha' value={senha} onChange={(e) =>[setSenha(e.target.value)]}  type='password' size="lg"/>
     
-                  <button type="button" onClick={handleCadastro} className="btn btn-light">Cadastrar</button>
+                  <button type="button" onClick={handleCadastro} className="btn btn-light" id = 'bt_cadastrar'>Cadastrar</button>
     
                   <div className='d-flex flex-row mt-3 mb-5'>
                     <MDBBtn tag='a' color='none' className='m-3' style={{ color: 'white' }}>
@@ -77,7 +77,7 @@ export default function Cadastro (){
                   </div>
     
                   <div>
-                    <p className="mb-0">Ja possui uma conta? <a href="#!" className="text-white-50 fw-bold"></a><Link to="/">Home</Link></p>
+                    <p className="mb-0">Ja possui uma conta? <Link id = "bt_goHome"to="/">Home</Link></p>
     
                   </div>
                 </MDBCardBody>
